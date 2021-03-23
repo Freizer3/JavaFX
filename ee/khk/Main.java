@@ -2,6 +2,7 @@ package ee.khk;
 
 import javafx.application.Application;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Group;
@@ -14,12 +15,10 @@ public class Main extends Application{
         Application.launch(args);
     }
     public void start(Stage stage) {
-        Label label = new Label("Hello");
-        Button button = new Button("Button");
-        Group group = new Group(button);
+        Group root = new Group();
 
-        FlowPane root = new FlowPane(label, group);
-        Scene scene = new Scene(root, 300, 150);
+
+        Scene scene = new Scene(root, 400, 150, Color.BLUE);
         stage.setScene(scene);
         stage.setTitle("Hello JavaFX");
         stage.show();
