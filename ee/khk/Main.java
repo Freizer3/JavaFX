@@ -11,8 +11,12 @@ public class Main extends Application{
         Application.launch(args);
     }
     public void start(Stage stage) {
+        Group root = new Group();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
         stage.setTitle("Hello JavaFX");
-        stage.setWidth(250);
+        stage.setWidth(300);
         stage.setHeight(150);
         stage.show();
     }
