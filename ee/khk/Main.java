@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Orientation;
 import javafx.scene.Parent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
@@ -33,7 +34,7 @@ public class Main extends Application{
         Label label8 = new Label("Label8");
         Label label9 = new Label("Label9");
 
-        FlowPane root = new FlowPane(10,10,label1, label2, label3, label4, label5 ,label6, label7, label8, label9);
+        FlowPane root = new FlowPane(Orientation.VERTICAL, 10,10,label1, label2, label3, label4, label5 ,label6, label7, label8, label9);
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
