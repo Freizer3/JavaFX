@@ -4,9 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
+import javafx.geometry.*;
 import javafx.scene.Parent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -28,10 +26,27 @@ public class Main extends Application{
     @Override
     public void start(Stage stage) {
 
-        Label first = new Label("First");
-        Label second = new Label("Second");
-        Label third = new Label("Third");
-        Label sixth = new Label("Sixth");
+        Button first = new Button("First");
+        GridPane.setHalignment(first, HPos.RIGHT);
+        GridPane.setValignment(first, VPos.BOTTOM);
+
+        Button second = new Button("Second");
+
+        second.setMaxWidth(Double.MAX_VALUE);
+        GridPane.setHgrow(second, Priority.ALWAYS);
+
+        Button third = new Button("third");
+        third.setMaxWidth(Double.MAX_VALUE);
+        third.setMaxHeight(Double.MAX_VALUE);
+        GridPane.setHgrow(third, Priority.ALWAYS);
+        GridPane.setVgrow(third, Priority.ALWAYS);
+
+        Button fourth = new Button("Fourth");
+        fourth.setMaxWidth(Double.MAX_VALUE);
+        fourth.setMaxHeight(Double.MAX_VALUE);
+        GridPane.setHgrow(fourth, Priority.ALWAYS);
+        GridPane.setVgrow(fourth, Priority.ALWAYS);
+        GridPane.setMargin(fourth, new Insets(10));
 
         GridPane root = new GridPane();
 
@@ -39,13 +54,9 @@ public class Main extends Application{
         column1.setPercentWidth(50);
         root.getColumnConstraints().add(column1);
 
-
         ColumnConstraints column2 = new ColumnConstraints();
         column2.setPercentWidth(50);
         root.getColumnConstraints().add(column2);
-
-
-
 
         RowConstraints row1 = new RowConstraints();
         row1.setPercentHeight(50);
@@ -55,15 +66,11 @@ public class Main extends Application{
         row2.setPercentHeight(50);
         root.getRowConstraints().add(row2);
 
-
-
         root.setGridLinesVisible(true);
         root.add(first,0,0);
-        root.add(second,1,0);
-        root.add(third,2,0);
-        root.add(sixth,2,1);
-
-
+        root.add(second,0,1);
+        root.add(third,1,0);
+        root.add(fourth,1,1);
 
 
 
