@@ -34,27 +34,25 @@ public class Main extends Application{
         Label sixth = new Label("Sixth");
 
         GridPane root = new GridPane();
+
         ColumnConstraints column1 = new ColumnConstraints();
-        column1.setPercentWidth(30);
+        column1.setPercentWidth(50);
         root.getColumnConstraints().add(column1);
 
 
         ColumnConstraints column2 = new ColumnConstraints();
-        column2.setPercentWidth(40);
+        column2.setPercentWidth(50);
         root.getColumnConstraints().add(column2);
 
-        ColumnConstraints column3 = new ColumnConstraints();
-        column2.setPercentWidth(30);
-        root.getColumnConstraints().add(column3);
 
 
 
         RowConstraints row1 = new RowConstraints();
-        row1.setPercentHeight(55);
+        row1.setPercentHeight(50);
         root.getRowConstraints().add(row1);
 
         RowConstraints row2 = new RowConstraints();
-        row2.setPercentHeight(45);
+        row2.setPercentHeight(50);
         root.getRowConstraints().add(row2);
 
 
