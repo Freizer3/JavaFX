@@ -31,6 +31,7 @@ public class Main extends Application{
         Label first = new Label("First");
         Label second = new Label("Second");
         Label third = new Label("Third");
+        Label sixth = new Label("Sixth");
 
         GridPane root = new GridPane();
         root.getColumnConstraints().add(new ColumnConstraints(80));
@@ -41,13 +42,16 @@ public class Main extends Application{
         column3.setHgrow(Priority.ALWAYS);
         root.getColumnConstraints().add(column3);
 
+        root.getRowConstraints().add(new RowConstraints(80));
+        root.getRowConstraints().add(new RowConstraints(80));
+
 
 
         root.setGridLinesVisible(true);
-        root.setColumnIndex(first,0);
-        root.setColumnIndex(second,1);
-        root.setColumnIndex(third,2);
-        root.getChildren().addAll(first,second,third);
+        root.add(first,0,0);
+        root.add(second,1,0);
+        root.add(third,2,0);
+        root.add(sixth,2,1);
 
 
 
