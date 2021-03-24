@@ -26,14 +26,11 @@ public class Main extends Application{
     }
     @Override
     public void start(Stage stage) {
-        BorderPane root = new BorderPane();
+        Label headerLbl = new Label("Press the login button");
+        Label statusLbl = new Label("Start screen");
+        Button loginBtn = new Button("Login");
 
-        Button top = new Button("top");
-        BorderPane.setAlignment(top, Pos.CENTER);
-        root.setTop(top);
-
-        Button center = new Button("center");
-        root.setCenter(center);
+        StackPane root = new StackPane(headerLbl, statusLbl, loginBtn);
 
 
 
@@ -43,7 +40,7 @@ public class Main extends Application{
         Scene scene = new Scene(root, 300, 150);
         stage.setScene(scene);
 
-        stage.setTitle("BorderPane in JavaFX");
+        stage.setTitle("Stackpane in JavaFX");
 
         stage.show();
     }
