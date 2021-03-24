@@ -26,21 +26,15 @@ public class Main extends Application{
     }
     @Override
     public void start(Stage stage) {
-        Button left = new Button("Left");
-        BorderPane.setAlignment(left, Pos.CENTER);
-
-        Button right = new Button("right");
-        BorderPane.setAlignment(right, Pos.BOTTOM_LEFT);
+        BorderPane root = new BorderPane();
 
         Button top = new Button("top");
         BorderPane.setAlignment(top, Pos.CENTER);
-
-        Button bottom = new Button("bottom");
-        BorderPane.setAlignment(bottom, Pos.CENTER);
+        root.setTop(top);
 
         Button center = new Button("center");
+        root.setCenter(center);
 
-        BorderPane root = new BorderPane(center, top, right,bottom,left);
 
 
 
